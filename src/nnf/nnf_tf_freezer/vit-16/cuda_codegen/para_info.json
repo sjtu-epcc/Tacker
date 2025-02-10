@@ -1,0 +1,25 @@
+{
+    "input": {
+        "pixel_values": {
+            "id": "((float32*)(inputs[0]))",
+            "name": "Parameter_207_0",
+            "shape": [
+                16,
+                3,
+                224,
+                224
+            ]
+        }
+    },
+    "output": {
+        "last_hidden_state": {
+            "id": "((float32*)(outputs[0]))",
+            "name": "Result_1527_0",
+            "shape": [
+                16,
+                197,
+                768
+            ]
+        }
+    }
+}

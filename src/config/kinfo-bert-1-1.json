@@ -1,0 +1,200 @@
+{
+    "cp": {
+        "register": 39,
+        "shared_memory": 0,
+        "blocksize": 128,
+        "ori_blks": 680,
+        "real_ori_blks": 16384
+    },
+    "cutcp": {
+        "register": 42,
+        "shared_memory": 4096,
+        "blocksize": 128,
+        "ori_blks": 272,
+        "real_ori_blks": 2720
+    },
+    "fft": {
+        "register": 33,
+        "shared_memory": 2048,
+        "blocksize": 128,
+        "ori_blks": 6800,
+        "real_ori_blks": 10240
+    },
+    "lbm": {
+        "register": 61,
+        "shared_memory": 0,
+        "blocksize": 128,
+        "ori_blks": 80,
+        "real_ori_blks": 16384
+    },
+    "mrif": {
+        "register": 32,
+        "shared_memory": 0,
+        "blocksize": 256,
+        "ori_blks": 1024,
+        "real_ori_blks": 2048
+    },
+    "mriq": {
+        "register": 31,
+        "shared_memory": 0,
+        "blocksize": 256,
+        "ori_blks": 13600,
+        "real_ori_blks": 2048
+    },
+    "sgemm": {
+        "register": 64,
+        "shared_memory": 512,
+        "blocksize": 128,
+        "ori_blks": 90,
+        "real_ori_blks": 774
+    },
+    "stencil": {
+        "register": 38,
+        "shared_memory": 1024,
+        "blocksize": 128,
+        "ori_blks": 680,
+        "real_ori_blks": 2048
+    },
+    "tzgemm_cp": {
+        "gridsize": 1,
+        "blocksize": 512,
+        "block_ratio": 5,
+        "best_block_ratio": 0.21,
+        "shared_memory": 0,
+        "128": 0.1,
+        "512": 0.34,
+        "1152": 0.78,
+        "2304": 1.56,
+        "4096": 2.72,
+        "4608": 3.12
+    },
+    "tzgemm_cutcp": {
+        "gridsize": 2,
+        "blocksize": 256,
+        "block_ratio": 0.03,
+        "best_block_ratio": 0.03,
+        "shared_memory": 22528,
+        "128": 0.02,
+        "512": 0.08,
+        "1152": 0.17,
+        "2304": 0.35,
+        "4096": 0.64,
+        "4608": 0.7
+    },
+    "tzgemm_fft": {
+        "gridsize": 1,
+        "blocksize": 512,
+        "block_ratio": 0.01,
+        "best_block_ratio": 1.0,
+        "shared_memory": 0,
+        "128": 0.3,
+        "512": 0.95,
+        "1152": 2.16,
+        "2304": 4.16,
+        "4096": 7.6,
+        "4608": 8.32
+    },
+    "tzgemm_lbm": {
+        "gridsize": 2,
+        "blocksize": 256,
+        "block_ratio": 11110.1,
+        "best_block_ratio": 0.1,
+        "shared_memory": 18432,
+        "4096": 10000.0
+    },
+    "tzgemm_mrif": {
+        "gridsize": 1,
+        "blocksize": 512,
+        "block_ratio": 0.88,
+        "best_block_ratio": 0.88,
+        "shared_memory": 0,
+        "real_shared_memory": 36864,
+        "128": 0.02,
+        "512": 0.08,
+        "1152": 0.21,
+        "2304": 0.43,
+        "4096": 0.64,
+        "4608": 0.86
+    },
+    "tzgemm_mriq": {
+        "gridsize": 1,
+        "blocksize": 512,
+        "block_ratio": 111110.05,
+        "best_block_ratio": 0.05,
+        "shared_memory": 0,
+        "real_shared_memory": 36864,
+        "128": 0.01,
+        "512": 0.03,
+        "1152": 0.08,
+        "2304": 0.17,
+        "4096": 0.24,
+        "4608": 0.34
+    },
+    "tzgemm_sgemm": {
+        "gridsize": 2,
+        "blocksize": 384,
+        "block_ratio": 1.0,
+        "best_block_ratio": 1.0,
+        "shared_memory": 0,
+        "4096": 1000
+    },
+    "tzgemm_stencil": {
+        "gridsize": 2,
+        "blocksize": 256,
+        "block_ratio": 0.1,
+        "best_block_ratio": 0.1,
+        "shared_memory": 19456,
+        "128": 0.04,
+        "512": 0.17,
+        "1152": 0.34,
+        "2304": 0.69,
+        "4096": 1.36,
+        "4608": 1.38
+    },
+    "ratio_test": {
+        "cd_kernel_name": "lbm",
+        "mix_cd_task_blk_num": 6528,
+        "solo_cd_task_blk_num": 0,
+        "k": 4608,
+        "4608": 6272,
+        "2304": 12544,
+        "1152": 25088,
+        "512": 50176,
+        "128": 100352
+    },
+    "cd_pair_ratio_profile": {
+        "a_name": "cp",
+        "b_name": "cutcp",
+        "a_blk_num": 1,
+        "b_blk_num": 1
+    },
+    "MAX_ORI_WMMA_A": {
+        "vgg16": 822083584
+    },
+    "MAX_ORI_WMMA_B": {
+        "vgg16": 6422528,
+        "resnet50": 6422528
+    },
+    "MAX_ORI_WMMA_C": {
+        "vgg16": 822083584,
+        "resnet50": 822083584
+    },
+    "MAX_COL_BUFFER": {
+        "vgg16": 51380224,
+        "resnet50": 25690112
+    },
+    "fft_tzgemm_mix_1_2": {
+        "gridsize": 1,
+        "blocksize": 384,
+        "shared_memory": 0
+    },
+    "fft_tzgemm_mix_2_2": {
+        "gridsize": 1,
+        "blocksize": 512,
+        "shared_memory": 0
+    },
+    "throughput_test": {
+        "a": "lbm",
+        "b": "stencil"
+    }
+}

@@ -1,0 +1,229 @@
+{
+    "sys_fig6": {
+        "cp_blk_num": 50000,
+        "int_cp_blk_num": 10000,
+        "int_fft_blk_num": 20000,
+        "int_mrif_blk_num": 10000,
+        "int_mriq_blk_num": 3000
+    },
+    "tzgemm_cp_int": {
+        "gridsize": 2,
+        "blocksize": 256,
+        "block_ratio": 5,
+        "best_block_ratio": 0.21,
+        "shared_memory": 0
+    },
+    "tzgemm_fft_int": {
+        "gridsize": 2,
+        "blocksize": 256,
+        "block_ratio": 0.01,
+        "best_block_ratio": 1.0,
+        "shared_memory": 0
+    },
+    "tzgemm_mrif_int": {
+        "gridsize": 1,
+        "blocksize": 512,
+        "block_ratio": 0.88,
+        "best_block_ratio": 0.88,
+        "shared_memory": 0,
+        "real_shared_memory": 36864
+    },
+    "tzgemm_mriq_int": {
+        "gridsize": 1,
+        "blocksize": 512,
+        "block_ratio": 111110.05,
+        "best_block_ratio": 0.05,
+        "shared_memory": 0,
+        "real_shared_memory": 36864
+    },
+    "tzgemm_cp": {
+        "gridsize": 2,
+        "blocksize": 256,
+        "block_ratio": 5,
+        "best_block_ratio": 0.21,
+        "shared_memory": 0
+    },
+    "tzgemm_cutcp": {
+        "gridsize": 2,
+        "blocksize": 256,
+        "block_ratio": 0.03,
+        "best_block_ratio": 0.03,
+        "shared_memory": 22528
+    },
+    "tzgemm_fft": {
+        "gridsize": 2,
+        "blocksize": 256,
+        "block_ratio": 0.01,
+        "best_block_ratio": 1.0,
+        "shared_memory": 0
+    },
+    "tzgemm_lbm": {
+        "gridsize": 2,
+        "blocksize": 256,
+        "block_ratio": 11110.1,
+        "best_block_ratio": 0.1,
+        "shared_memory": 18432
+    },
+    "tzgemm_mrif": {
+        "gridsize": 1,
+        "blocksize": 512,
+        "block_ratio": 0.88,
+        "best_block_ratio": 0.88,
+        "shared_memory": 0,
+        "real_shared_memory": 36864
+    },
+    "tzgemm_mriq": {
+        "gridsize": 1,
+        "blocksize": 512,
+        "block_ratio": 111110.05,
+        "best_block_ratio": 0.05,
+        "shared_memory": 0,
+        "real_shared_memory": 36864
+    },
+    "tzgemm_sgemm": {
+        "gridsize": 2,
+        "blocksize": 256,
+        "block_ratio": 1.0,
+        "best_block_ratio": 1.0,
+        "shared_memory": 0
+    },
+    "tzgemm_stencil": {
+        "gridsize": 2,
+        "blocksize": 256,
+        "block_ratio": 0.1,
+        "best_block_ratio": 0.1,
+        "shared_memory": 19456
+    },
+    "ratio_test": {
+        "cd_kernel_name": "cp",
+        "mix_cd_task_blk_num": 30000,
+        "solo_cd_task_blk_num": 0,
+        "k": 4096,
+        "4096": 100000,
+        "4608": 6272,
+        "2304": 12544,
+        "1152": 25088,
+        "512": 50176,
+        "128": 100352
+    },
+    "MAX_ORI_WMMA_A": {
+        "vgg16": 822083584
+    },
+    "MAX_ORI_WMMA_B": {
+        "vgg16": 6422528,
+        "resnet50": 6422528
+    },
+    "MAX_ORI_WMMA_C": {
+        "vgg16": 822083584,
+        "resnet50": 822083584
+    },
+    "MAX_COL_BUFFER": {
+        "vgg16": 51380224,
+        "resnet50": 25690112
+    },
+    "fft_tzgemm_mix_1_2": {
+        "gridsize": 1,
+        "blocksize": 384,
+        "shared_memory": 0
+    },
+    "fft_tzgemm_mix_2_2": {
+        "gridsize": 1,
+        "blocksize": 512,
+        "shared_memory": 0
+    },
+    "throughput_test": {
+        "a": "fft",
+        "b": "cp"
+    },
+    "cp": {
+        "register": 39,
+        "shared_memory": 0,
+        "blocksize": 128,
+        "ori_blks": 16384,
+        "real_ori_blks": 16384
+    },
+    "cutcp": {
+        "register": 42,
+        "shared_memory": 4096,
+        "blocksize": 128,
+        "ori_blks": 5000,
+        "real_ori_blks": 2720
+    },
+    "fft": {
+        "register": 33,
+        "shared_memory": 2048,
+        "blocksize": 128,
+        "ori_blks": 102400,
+        "real_ori_blks": 10240
+    },
+    "lbm": {
+        "register": 61,
+        "shared_memory": 0,
+        "blocksize": 128,
+        "ori_blks": 10240,
+        "real_ori_blks": 32768,
+        "4096": 4096
+    },
+    "mrif": {
+        "register": 32,
+        "shared_memory": 0,
+        "blocksize": 256,
+        "ori_blks": 2048,
+        "real_ori_blks": 2048
+    },
+    "mriq": {
+        "register": 31,
+        "shared_memory": 0,
+        "blocksize": 256,
+        "ori_blks": 3400,
+        "real_ori_blks": 3400
+    },
+    "sgemm": {
+        "register": 64,
+        "shared_memory": 512,
+        "blocksize": 128,
+        "ori_blks": 3400,
+        "real_ori_blks": 3400,
+        "4096": 4096
+    },
+    "stencil": {
+        "register": 38,
+        "shared_memory": 1024,
+        "blocksize": 128,
+        "ori_blks": 1020,
+        "real_ori_blks": 6800
+    },
+    "nsight_compute": {
+        "mix_kernel_name": "fft_sgemm"
+    },
+    "cd_pair_ratio_profile": {
+        "a_name": "mriq",
+        "b_name": "fft",
+        "a_blk_num": 680,
+        "b_blk_num": 6800
+    },
+    "cd_pair_best_ratio": {
+        "fft_cutcp": 8.366,
+        "fft_lbm": 0.579,
+        "mrif_stencil": 0.836,
+        "sgemm_fft": 0.0588,
+        "fft_sgemm": 17,
+        "stencil_fft": 0.1785,
+        "mrif_lbm": 0.0551,
+        "mriq_lbm": 0.0375,
+        "sgemm_mrif": 0.5176,
+        "fft_cp": 1.1718,
+        "mriq_fft": 0.1
+    },
+    "cd_pair_accuracy": {
+        "a_name": "fft",
+        "b_name": "lbm",
+        "a_blk_num": 1020,
+        "b_blk_num": 27200
+    },
+    "solo_gptb_accuracy": {
+        "name": "tzgemm",
+        "blk_num": 1360,
+        "m": 9216
+    }
+}

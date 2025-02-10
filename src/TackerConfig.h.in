@@ -1,0 +1,16 @@
+// the configured options and settings for Tacker
+#pragma once
+#define Tacker_VERSION_MAJOR @PROJECT_VERSION_MAJOR@
+#define Tacker_VERSION_MINOR @PROJECT_VERSION_MINOR@
+#define Tacker_VERSION_PATCH @PROJECT_VERSION_PATCH@
+
+// logPath
+#define LOG_FILE_PATH "@LOG_FILE_PATH@"
+
+#define COMPILE_TIMESTAMP "@COMPILE_TIME@"
+
+// CMakelists path
+#define CMAKELISTS_PATH "@CMAKE_CURRENT_SOURCE_DIR@"
+
+// build type
+#define BUILD_TYPE "@CMAKE_BUILD_TYPE@"

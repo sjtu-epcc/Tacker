@@ -1,0 +1,84 @@
+cp_cutcp_mix: 
+	nvcc -o cp_cutcp_mix -I../ --ptxas-options=-v file_t/readatom.o -lcublas -lcurand -lm -arch=sm_75 -lpthread -Xptxas -dlcm=ca cp_cutcp.cu
+
+cp_fft_mix: 
+	nvcc -o cp_fft_mix -I../ --ptxas-options=-v -lcublas -lcurand -lm -arch=sm_75 -lpthread cp_fft.cu
+
+cp_lbm_mix: 
+	nvcc -o cp_lbm_mix -I../ --ptxas-options=-v -lcublas -lcurand -lm -arch=sm_75 -lpthread -Xptxas -dlcm=ca cp_lbm.cu
+
+cp_mrif_mix: 
+	nvcc -o cp_mrif_mix -I../ -lm --ptxas-options=-v -arch=sm_75 -lpthread cp_mrif.cu
+
+cp_mriq_mix: 
+	nvcc -o cp_mriq_mix -I../ --ptxas-options=-v -lcublas -lcurand -lm -arch=sm_75 -lpthread -Xptxas -dlcm=ca cp_mriq.cu
+
+cp_sgemm_mix: 
+	nvcc -o cp_sgemm_mix -I../ --ptxas-options=-v -lcublas -lcurand -lm -arch=sm_75 -lpthread -Xptxas -dlcm=ca cp_sgemm.cu
+
+cp_tpacf_mix: 
+	nvcc -o cp_tpacf_mix -I../ --ptxas-options=-v -lcublas -lcurand -lm -arch=sm_75 -lpthread -Xptxas -dlcm=ca cp_tpacf.cu
+
+cutcp_fft_mix: 
+	nvcc -o cutcp_fft_mix -I../ --ptxas-options=-v file_t/readatom.o -lcublas -lm -lpthread -arch=sm_75 -lcurand -Xptxas -dlcm=ca cutcp_fft.cu
+
+cutcp_lbm_mix: 
+	nvcc -o cutcp_lbm_mix -I../ --ptxas-options=-v file_t/readatom.o -lcublas -lm -arch=sm_75 -lcurand -Xptxas -dlcm=ca cutcp_lbm.cu
+
+cutcp_mrif_mix: 
+	nvcc -o cutcp_mrif_mix -I../ --ptxas-options=-v file_t/readatom.o -lcublas -lm -lpthread -arch=sm_75 -lcurand -Xptxas -dlcm=ca cutcp_mrif.cu
+
+cutcp_mriq_mix: 
+	nvcc -o cutcp_mriq_mix -I../ --ptxas-options=-v file_t/readatom.o -lcublas -lm -arch=sm_75 -lcurand -Xptxas -dlcm=ca cutcp_mriq.cu
+
+cutcp_sgemm_mix: 
+	nvcc -o cutcp_sgemm_mix -I../ --ptxas-options=-v file_t/readatom.o -lcublas -lm -arch=sm_75 -lcurand -Xptxas -dlcm=ca cutcp_sgemm.cu
+
+cutcp_tpacf_mix: 
+	nvcc -o cutcp_tpacf_mix -I../ --ptxas-options=-v file_t/readatom.o -lcublas -lm -arch=sm_75 -lcurand -Xptxas -dlcm=ca cutcp_tpacf.cu
+
+fft_lbm_mix: 
+	nvcc -o fft_lbm_mix -I../ --ptxas-options=-v -lcublas -lcurand -lm -arch=sm_75 -lpthread -Xptxas -dlcm=ca fft_lbm.cu
+
+fft_mrif_mix: 
+	nvcc -o fft_mrif_mix -I../ --ptxas-options=-v -lcublas -lcurand -lm -arch=sm_75 -lpthread fft_mrif.cu
+
+fft_mriq_mix: 
+	nvcc -o fft_mriq_mix -I../ --ptxas-options=-v -lcublas -lcurand -lm -arch=sm_75 -lpthread -Xptxas -dlcm=ca fft_mriq.cu
+
+fft_sgemm_mix: 
+	nvcc -o fft_sgemm_mix -I../ --ptxas-options=-v -lcublas -lcurand -lm -arch=sm_75 -lpthread -Xptxas -dlcm=ca fft_sgemm.cu
+
+fft_tpacf_mix: 
+	nvcc -o fft_tpacf_mix -I../ --ptxas-options=-v -lcublas -lcurand -lm -arch=sm_75 -lpthread -Xptxas -dlcm=ca fft_tpacf.cu
+
+lbm_mrif_mix: 
+	nvcc -o lbm_mrif_mix -I../ --ptxas-options=-v -lcublas -lm -lpthread -arch=sm_75 -lcurand -Xptxas -dlcm=ca lbm_mrif.cu
+
+lbm_mriq_mix: 
+	nvcc -o lbm_mriq_mix -I../ --ptxas-options=-v -lcublas -arch=sm_75 -lcurand -Xptxas -dlcm=ca lbm_mriq.cu
+
+lbm_sgemm_mix: 
+	nvcc -o lbm_sgemm_mix -I../ --ptxas-options=-v -lcublas -arch=sm_75 -lcurand -Xptxas -dlcm=ca lbm_sgemm.cu
+
+lbm_tpacf_mix: 
+	nvcc -o lbm_tpacf_mix -I../ --ptxas-options=-v -lcublas -arch=sm_75 -lcurand -Xptxas -dlcm=ca lbm_tpacf.cu
+
+mrif_mriq_mix: 
+	nvcc -o mrif_mriq_mix -I../ --ptxas-options=-v -lcublas -lcurand -lm -arch=sm_75 -lpthread -Xptxas -dlcm=ca mrif_mriq.cu
+
+mrif_sgemm_mix: 
+	nvcc -o mrif_sgemm_mix -I../ --ptxas-options=-v -lcublas -lcurand -lm -arch=sm_75 -lpthread -Xptxas -dlcm=ca mrif_sgemm.cu
+
+mrif_tpacf_mix: 
+	nvcc -o mrif_tpacf_mix -I../ --ptxas-options=-v -lcublas -lcurand -lm -arch=sm_75 -lpthread -Xptxas -dlcm=ca mrif_tpacf.cu
+
+mriq_sgemm_mix: 
+	nvcc -o mriq_sgemm_mix -I../ --ptxas-options=-v -lcublas -arch=sm_75 -lcurand -Xptxas -dlcm=ca mriq_sgemm.cu
+
+mriq_tpacf_mix: 
+	nvcc -o mriq_tpacf_mix -I../ --ptxas-options=-v -lcublas -arch=sm_75 -lcurand -Xptxas -dlcm=ca mriq_tpacf.cu
+
+sgemm_tpacf_mix: 
+	nvcc -o sgemm_tpacf_mix -I../ --ptxas-options=-v -lcublas -arch=sm_75 -lcurand -Xptxas -dlcm=ca sgemm_tpacf.cu
+

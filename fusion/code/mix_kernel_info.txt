@@ -1,0 +1,230 @@
+len(kernel_pairs):  21
+kernel_pairs:  [['cp', 'cutcp'], ['cp', 'fft'], ['cp', 'lbm'], ['cp', 'mrif'], ['cp', 'mriq'], ['cp', 'sgemm'], ['cutcp', 'fft'], ['cutcp', 'lbm'], ['cutcp', 'mrif'], ['cutcp', 'mriq'], ['cutcp', 'sgemm'], ['fft', 'lbm'], ['fft', 'mrif'], ['fft', 'mriq'], ['fft', 'sgemm'], ['lbm', 'mrif'], ['lbm', 'mriq'], ['lbm', 'sgemm'], ['mrif', 'mriq'], ['mrif', 'sgemm'], ['mriq', 'sgemm']]
+kernel pair:  cp cutcp
+- cp as main kernel:
+-- cp_num: 6 cutcp_num: 1 blks_per_sm: 1 reg used: 37632 smem used: 4096 thread used: 896
+-- cp_num: 6 cutcp_num: 2 blks_per_sm: 1 reg used: 43008 smem used: 8192 thread used: 1024
+-- cp_num: 3 cutcp_num: 1 blks_per_sm: 2 reg used: 43008 smem used: 8192 thread used: 1024
+- cutcp as main kernel:
+-- cp_num: 1 cutcp_num: 6 blks_per_sm: 1 reg used: 37632 smem used: 24576 thread used: 896
+-- cp_num: 2 cutcp_num: 6 blks_per_sm: 1 reg used: 43008 smem used: 24576 thread used: 1024
+-- cp_num: 1 cutcp_num: 3 blks_per_sm: 2 reg used: 43008 smem used: 24576 thread used: 1024
+
+
+kernel pair:  cp fft
+- cp as main kernel:
+-- cp_num: 6 fft_num: 1 blks_per_sm: 1 reg used: 34944 smem used: 2048 thread used: 896
+-- cp_num: 6 fft_num: 2 blks_per_sm: 1 reg used: 39936 smem used: 4096 thread used: 1024
+-- cp_num: 3 fft_num: 1 blks_per_sm: 2 reg used: 39936 smem used: 4096 thread used: 1024
+- fft as main kernel:
+-- cp_num: 1 fft_num: 3 blks_per_sm: 1 reg used: 19968 smem used: 6144 thread used: 512
+-- cp_num: 2 fft_num: 3 blks_per_sm: 1 reg used: 24960 smem used: 6144 thread used: 640
+-- cp_num: 3 fft_num: 3 blks_per_sm: 1 reg used: 29952 smem used: 6144 thread used: 768
+-- cp_num: 4 fft_num: 3 blks_per_sm: 1 reg used: 34944 smem used: 6144 thread used: 896
+-- cp_num: 5 fft_num: 3 blks_per_sm: 1 reg used: 39936 smem used: 6144 thread used: 1024
+-- cp_num: 1 fft_num: 1 blks_per_sm: 3 reg used: 29952 smem used: 6144 thread used: 768
+
+
+kernel pair:  cp lbm
+- cp as main kernel:
+-- cp_num: 6 lbm_num: 1 blks_per_sm: 1 reg used: 54656 smem used: 0 thread used: 896
+-- cp_num: 6 lbm_num: 2 blks_per_sm: 1 reg used: 62464 smem used: 0 thread used: 1024
+-- cp_num: 3 lbm_num: 1 blks_per_sm: 2 reg used: 62464 smem used: 0 thread used: 1024
+- lbm as main kernel:
+-- cp_num: 1 lbm_num: 1 blks_per_sm: 1 reg used: 15616 smem used: 0 thread used: 256
+-- cp_num: 2 lbm_num: 1 blks_per_sm: 1 reg used: 23424 smem used: 0 thread used: 384
+-- cp_num: 4 lbm_num: 1 blks_per_sm: 1 reg used: 39040 smem used: 0 thread used: 640
+-- cp_num: 5 lbm_num: 1 blks_per_sm: 1 reg used: 46848 smem used: 0 thread used: 768
+-- cp_num: 7 lbm_num: 1 blks_per_sm: 1 reg used: 62464 smem used: 0 thread used: 1024
+
+
+kernel pair:  cp mrif
+- cp as main kernel:
+-- cp_num: 6 mrif_num: 1 blks_per_sm: 1 reg used: 39936 smem used: 0 thread used: 1024
+- mrif as main kernel:
+-- cp_num: 1 mrif_num: 3 blks_per_sm: 1 reg used: 34944 smem used: 0 thread used: 896
+-- cp_num: 2 mrif_num: 3 blks_per_sm: 1 reg used: 39936 smem used: 0 thread used: 1024
+
+
+kernel pair:  cp mriq
+- cp as main kernel:
+-- cp_num: 6 mriq_num: 1 blks_per_sm: 1 reg used: 39936 smem used: 0 thread used: 1024
+- mriq as main kernel:
+
+
+kernel pair:  cp sgemm
+- cp as main kernel:
+-- cp_num: 6 sgemm_num: 1 blks_per_sm: 1 reg used: 57344 smem used: 512 thread used: 896
+-- cp_num: 6 sgemm_num: 2 blks_per_sm: 1 reg used: 65536 smem used: 1024 thread used: 1024
+-- cp_num: 3 sgemm_num: 1 blks_per_sm: 2 reg used: 65536 smem used: 1024 thread used: 1024
+- sgemm as main kernel:
+-- cp_num: 1 sgemm_num: 4 blks_per_sm: 1 reg used: 40960 smem used: 2048 thread used: 640
+-- cp_num: 2 sgemm_num: 4 blks_per_sm: 1 reg used: 49152 smem used: 2048 thread used: 768
+-- cp_num: 3 sgemm_num: 4 blks_per_sm: 1 reg used: 57344 smem used: 2048 thread used: 896
+-- cp_num: 4 sgemm_num: 4 blks_per_sm: 1 reg used: 65536 smem used: 2048 thread used: 1024
+-- cp_num: 1 sgemm_num: 2 blks_per_sm: 2 reg used: 49152 smem used: 2048 thread used: 768
+-- cp_num: 2 sgemm_num: 2 blks_per_sm: 2 reg used: 65536 smem used: 2048 thread used: 1024
+-- cp_num: 1 sgemm_num: 1 blks_per_sm: 4 reg used: 65536 smem used: 2048 thread used: 1024
+
+
+kernel pair:  cutcp fft
+- cutcp as main kernel:
+-- cutcp_num: 6 fft_num: 1 blks_per_sm: 1 reg used: 37632 smem used: 26624 thread used: 896
+-- cutcp_num: 6 fft_num: 2 blks_per_sm: 1 reg used: 43008 smem used: 28672 thread used: 1024
+-- cutcp_num: 3 fft_num: 1 blks_per_sm: 2 reg used: 43008 smem used: 28672 thread used: 1024
+- fft as main kernel:
+-- cutcp_num: 1 fft_num: 3 blks_per_sm: 1 reg used: 21504 smem used: 10240 thread used: 512
+-- cutcp_num: 2 fft_num: 3 blks_per_sm: 1 reg used: 26880 smem used: 14336 thread used: 640
+-- cutcp_num: 3 fft_num: 3 blks_per_sm: 1 reg used: 32256 smem used: 18432 thread used: 768
+-- cutcp_num: 4 fft_num: 3 blks_per_sm: 1 reg used: 37632 smem used: 22528 thread used: 896
+-- cutcp_num: 5 fft_num: 3 blks_per_sm: 1 reg used: 43008 smem used: 26624 thread used: 1024
+-- cutcp_num: 1 fft_num: 1 blks_per_sm: 3 reg used: 32256 smem used: 18432 thread used: 768
+
+
+kernel pair:  cutcp lbm
+- cutcp as main kernel:
+-- cutcp_num: 6 lbm_num: 1 blks_per_sm: 1 reg used: 54656 smem used: 24576 thread used: 896
+-- cutcp_num: 6 lbm_num: 2 blks_per_sm: 1 reg used: 62464 smem used: 24576 thread used: 1024
+-- cutcp_num: 3 lbm_num: 1 blks_per_sm: 2 reg used: 62464 smem used: 24576 thread used: 1024
+- lbm as main kernel:
+-- cutcp_num: 1 lbm_num: 1 blks_per_sm: 1 reg used: 15616 smem used: 4096 thread used: 256
+-- cutcp_num: 2 lbm_num: 1 blks_per_sm: 1 reg used: 23424 smem used: 8192 thread used: 384
+-- cutcp_num: 4 lbm_num: 1 blks_per_sm: 1 reg used: 39040 smem used: 16384 thread used: 640
+-- cutcp_num: 5 lbm_num: 1 blks_per_sm: 1 reg used: 46848 smem used: 20480 thread used: 768
+-- cutcp_num: 7 lbm_num: 1 blks_per_sm: 1 reg used: 62464 smem used: 28672 thread used: 1024
+
+
+kernel pair:  cutcp mrif
+- cutcp as main kernel:
+-- cutcp_num: 6 mrif_num: 1 blks_per_sm: 1 reg used: 43008 smem used: 24576 thread used: 1024
+- mrif as main kernel:
+-- cutcp_num: 1 mrif_num: 3 blks_per_sm: 1 reg used: 37632 smem used: 4096 thread used: 896
+-- cutcp_num: 2 mrif_num: 3 blks_per_sm: 1 reg used: 43008 smem used: 8192 thread used: 1024
+
+
+kernel pair:  cutcp mriq
+- cutcp as main kernel:
+-- cutcp_num: 6 mriq_num: 1 blks_per_sm: 1 reg used: 43008 smem used: 24576 thread used: 1024
+- mriq as main kernel:
+
+
+kernel pair:  cutcp sgemm
+- cutcp as main kernel:
+-- cutcp_num: 6 sgemm_num: 1 blks_per_sm: 1 reg used: 57344 smem used: 25088 thread used: 896
+-- cutcp_num: 6 sgemm_num: 2 blks_per_sm: 1 reg used: 65536 smem used: 25600 thread used: 1024
+-- cutcp_num: 3 sgemm_num: 1 blks_per_sm: 2 reg used: 65536 smem used: 25600 thread used: 1024
+- sgemm as main kernel:
+-- cutcp_num: 1 sgemm_num: 4 blks_per_sm: 1 reg used: 40960 smem used: 6144 thread used: 640
+-- cutcp_num: 2 sgemm_num: 4 blks_per_sm: 1 reg used: 49152 smem used: 10240 thread used: 768
+-- cutcp_num: 3 sgemm_num: 4 blks_per_sm: 1 reg used: 57344 smem used: 14336 thread used: 896
+-- cutcp_num: 4 sgemm_num: 4 blks_per_sm: 1 reg used: 65536 smem used: 18432 thread used: 1024
+-- cutcp_num: 1 sgemm_num: 2 blks_per_sm: 2 reg used: 49152 smem used: 10240 thread used: 768
+-- cutcp_num: 2 sgemm_num: 2 blks_per_sm: 2 reg used: 65536 smem used: 18432 thread used: 1024
+-- cutcp_num: 1 sgemm_num: 1 blks_per_sm: 4 reg used: 65536 smem used: 18432 thread used: 1024
+
+
+kernel pair:  fft lbm
+- fft as main kernel:
+-- fft_num: 3 lbm_num: 1 blks_per_sm: 1 reg used: 31232 smem used: 6144 thread used: 512
+-- fft_num: 3 lbm_num: 2 blks_per_sm: 1 reg used: 39040 smem used: 6144 thread used: 640
+-- fft_num: 3 lbm_num: 3 blks_per_sm: 1 reg used: 46848 smem used: 6144 thread used: 768
+-- fft_num: 3 lbm_num: 4 blks_per_sm: 1 reg used: 54656 smem used: 6144 thread used: 896
+-- fft_num: 3 lbm_num: 5 blks_per_sm: 1 reg used: 62464 smem used: 6144 thread used: 1024
+-- fft_num: 1 lbm_num: 1 blks_per_sm: 3 reg used: 46848 smem used: 6144 thread used: 768
+- lbm as main kernel:
+-- fft_num: 2 lbm_num: 1 blks_per_sm: 1 reg used: 23424 smem used: 4096 thread used: 384
+-- fft_num: 4 lbm_num: 1 blks_per_sm: 1 reg used: 39040 smem used: 8192 thread used: 640
+-- fft_num: 5 lbm_num: 1 blks_per_sm: 1 reg used: 46848 smem used: 10240 thread used: 768
+-- fft_num: 6 lbm_num: 1 blks_per_sm: 1 reg used: 54656 smem used: 12288 thread used: 896
+-- fft_num: 7 lbm_num: 1 blks_per_sm: 1 reg used: 62464 smem used: 14336 thread used: 1024
+
+
+kernel pair:  fft mrif
+- fft as main kernel:
+-- fft_num: 3 mrif_num: 1 blks_per_sm: 1 reg used: 21120 smem used: 6144 thread used: 640
+-- fft_num: 3 mrif_num: 2 blks_per_sm: 1 reg used: 29568 smem used: 6144 thread used: 896
+- mrif as main kernel:
+-- fft_num: 1 mrif_num: 3 blks_per_sm: 1 reg used: 29568 smem used: 2048 thread used: 896
+-- fft_num: 2 mrif_num: 3 blks_per_sm: 1 reg used: 33792 smem used: 4096 thread used: 1024
+
+
+kernel pair:  fft mriq
+- fft as main kernel:
+-- fft_num: 3 mriq_num: 1 blks_per_sm: 1 reg used: 21120 smem used: 6144 thread used: 640
+-- fft_num: 3 mriq_num: 2 blks_per_sm: 1 reg used: 29568 smem used: 6144 thread used: 896
+- mriq as main kernel:
+
+
+kernel pair:  fft sgemm
+- fft as main kernel:
+-- fft_num: 3 sgemm_num: 1 blks_per_sm: 1 reg used: 32768 smem used: 6656 thread used: 512
+-- fft_num: 3 sgemm_num: 2 blks_per_sm: 1 reg used: 40960 smem used: 7168 thread used: 640
+-- fft_num: 3 sgemm_num: 3 blks_per_sm: 1 reg used: 49152 smem used: 7680 thread used: 768
+-- fft_num: 3 sgemm_num: 4 blks_per_sm: 1 reg used: 57344 smem used: 8192 thread used: 896
+-- fft_num: 3 sgemm_num: 5 blks_per_sm: 1 reg used: 65536 smem used: 8704 thread used: 1024
+-- fft_num: 1 sgemm_num: 1 blks_per_sm: 3 reg used: 49152 smem used: 7680 thread used: 768
+- sgemm as main kernel:
+-- fft_num: 1 sgemm_num: 4 blks_per_sm: 1 reg used: 40960 smem used: 4096 thread used: 640
+-- fft_num: 2 sgemm_num: 4 blks_per_sm: 1 reg used: 49152 smem used: 6144 thread used: 768
+-- fft_num: 4 sgemm_num: 4 blks_per_sm: 1 reg used: 65536 smem used: 10240 thread used: 1024
+-- fft_num: 1 sgemm_num: 2 blks_per_sm: 2 reg used: 49152 smem used: 6144 thread used: 768
+-- fft_num: 2 sgemm_num: 2 blks_per_sm: 2 reg used: 65536 smem used: 10240 thread used: 1024
+
+
+kernel pair:  lbm mrif
+- lbm as main kernel:
+-- lbm_num: 1 mrif_num: 1 blks_per_sm: 1 reg used: 23424 smem used: 0 thread used: 384
+-- lbm_num: 1 mrif_num: 2 blks_per_sm: 1 reg used: 39040 smem used: 0 thread used: 640
+-- lbm_num: 1 mrif_num: 3 blks_per_sm: 1 reg used: 54656 smem used: 0 thread used: 896
+- mrif as main kernel:
+-- lbm_num: 2 mrif_num: 3 blks_per_sm: 1 reg used: 62464 smem used: 0 thread used: 1024
+
+
+kernel pair:  lbm mriq
+- lbm as main kernel:
+-- lbm_num: 1 mriq_num: 1 blks_per_sm: 1 reg used: 23424 smem used: 0 thread used: 384
+-- lbm_num: 1 mriq_num: 2 blks_per_sm: 1 reg used: 39040 smem used: 0 thread used: 640
+-- lbm_num: 1 mriq_num: 3 blks_per_sm: 1 reg used: 54656 smem used: 0 thread used: 896
+- mriq as main kernel:
+
+
+kernel pair:  lbm sgemm
+- lbm as main kernel:
+-- lbm_num: 1 sgemm_num: 1 blks_per_sm: 1 reg used: 16384 smem used: 512 thread used: 256
+-- lbm_num: 1 sgemm_num: 2 blks_per_sm: 1 reg used: 24576 smem used: 1024 thread used: 384
+-- lbm_num: 1 sgemm_num: 3 blks_per_sm: 1 reg used: 32768 smem used: 1536 thread used: 512
+-- lbm_num: 1 sgemm_num: 4 blks_per_sm: 1 reg used: 40960 smem used: 2048 thread used: 640
+-- lbm_num: 1 sgemm_num: 5 blks_per_sm: 1 reg used: 49152 smem used: 2560 thread used: 768
+-- lbm_num: 1 sgemm_num: 6 blks_per_sm: 1 reg used: 57344 smem used: 3072 thread used: 896
+-- lbm_num: 1 sgemm_num: 7 blks_per_sm: 1 reg used: 65536 smem used: 3584 thread used: 1024
+- sgemm as main kernel:
+-- lbm_num: 2 sgemm_num: 4 blks_per_sm: 1 reg used: 49152 smem used: 2048 thread used: 768
+-- lbm_num: 3 sgemm_num: 4 blks_per_sm: 1 reg used: 57344 smem used: 2048 thread used: 896
+-- lbm_num: 4 sgemm_num: 4 blks_per_sm: 1 reg used: 65536 smem used: 2048 thread used: 1024
+-- lbm_num: 2 sgemm_num: 2 blks_per_sm: 2 reg used: 65536 smem used: 2048 thread used: 1024
+
+
+kernel pair:  mrif mriq
+- mrif as main kernel:
+-- mrif_num: 3 mriq_num: 1 blks_per_sm: 1 reg used: 32768 smem used: 0 thread used: 1024
+- mriq as main kernel:
+
+
+kernel pair:  mrif sgemm
+- mrif as main kernel:
+-- mrif_num: 3 sgemm_num: 1 blks_per_sm: 1 reg used: 57344 smem used: 512 thread used: 896
+-- mrif_num: 3 sgemm_num: 2 blks_per_sm: 1 reg used: 65536 smem used: 1024 thread used: 1024
+- sgemm as main kernel:
+-- mrif_num: 1 sgemm_num: 4 blks_per_sm: 1 reg used: 49152 smem used: 2048 thread used: 768
+-- mrif_num: 2 sgemm_num: 4 blks_per_sm: 1 reg used: 65536 smem used: 2048 thread used: 1024
+-- mrif_num: 1 sgemm_num: 2 blks_per_sm: 2 reg used: 65536 smem used: 2048 thread used: 1024
+
+
+kernel pair:  mriq sgemm
+- mriq as main kernel:
+- sgemm as main kernel:
+-- mriq_num: 1 sgemm_num: 4 blks_per_sm: 1 reg used: 49152 smem used: 2048 thread used: 768
+-- mriq_num: 2 sgemm_num: 4 blks_per_sm: 1 reg used: 65536 smem used: 2048 thread used: 1024
+-- mriq_num: 1 sgemm_num: 2 blks_per_sm: 2 reg used: 65536 smem used: 2048 thread used: 1024
+
+

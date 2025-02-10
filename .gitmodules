@@ -1,0 +1,3 @@
+[submodule "thirdparty/nnfusion"]
+	path = thirdparty/nnfusion
+	url = https://github.com/microsoft/nnfusion.git

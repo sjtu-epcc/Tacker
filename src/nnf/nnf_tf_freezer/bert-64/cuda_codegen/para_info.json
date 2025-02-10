@@ -1,0 +1,38 @@
+{
+    "input": {
+        "Placeholder": {
+            "id": "((int32_t*)(inputs[0]))",
+            "name": "Parameter_0_0",
+            "shape": [
+                64,
+                128
+            ]
+        },
+        "Placeholder_1": {
+            "id": "((int32_t*)(inputs[1]))",
+            "name": "Parameter_1_0",
+            "shape": [
+                64,
+                128
+            ]
+        },
+        "Placeholder_2": {
+            "id": "((int32_t*)(inputs[2]))",
+            "name": "Parameter_2_0",
+            "shape": [
+                64,
+                128
+            ]
+        }
+    },
+    "output": {
+        "Softmax_393_0": {
+            "id": "((float*)(outputs[0]))",
+            "name": "Result_394_0",
+            "shape": [
+                64,
+                1001
+            ]
+        }
+    }
+}
