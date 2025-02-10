@@ -1,0 +1,68 @@
+cp_cutcp_mix: $(wildcard cp_cutcp_*.cu)
+	$(foreach file,$^,nvcc -o $(patsubst %.cu,%_mix,$(file)) -I../ --ptxas-options=-v ../file_t/readatom.o -lcublas -lcurand -lm -arch=sm_75 -lpthread -Xptxas -dlcm=ca $(file);)
+cp_fft_mix: $(wildcard cp_fft_*.cu)
+	$(foreach file,$^,nvcc -o $(patsubst %.cu,%_mix,$(file)) -I../ --ptxas-options=-v -lcublas -lcurand -lm -arch=sm_75 -lpthread $(file);)
+cp_lbm_mix: $(wildcard cp_lbm_*.cu)
+	$(foreach file,$^,nvcc -o $(patsubst %.cu,%_mix,$(file)) -I../ --ptxas-options=-v -lcublas -lcurand -lm -arch=sm_75 -lpthread -Xptxas -dlcm=ca $(file);)
+cp_mrif_mix: $(wildcard cp_mrif_*.cu)
+	$(foreach file,$^,nvcc -o $(patsubst %.cu,%_mix,$(file)) -I../ -lm --ptxas-options=-v -arch=sm_75 -lpthread $(file);)
+cp_mriq_mix: $(wildcard cp_mriq_*.cu)
+	$(foreach file,$^,nvcc -o $(patsubst %.cu,%_mix,$(file)) -I../ --ptxas-options=-v -lcublas -lcurand -lm -arch=sm_75 -lpthread -Xptxas -dlcm=ca $(file);)
+cp_sgemm_mix: $(wildcard cp_sgemm_*.cu)
+	$(foreach file,$^,nvcc -o $(patsubst %.cu,%_mix,$(file)) -I../ --ptxas-options=-v -lcublas -lcurand -lm -arch=sm_75 -lpthread -Xptxas -dlcm=ca $(file);)
+cp_stencil_mix: $(wildcard cp_stencil_*.cu)
+	$(foreach file,$^,nvcc -o $(patsubst %.cu,%_mix,$(file)) -I../ --ptxas-options=-v -lcurand -lpthread -lm -lcublas -arch=sm_75 -Xptxas -dlcm=ca $(file);)
+
+cutcp_fft_mix: $(wildcard cutcp_fft_*.cu)
+	$(foreach file,$^,nvcc -o $(patsubst %.cu,%_mix,$(file)) -I../ --ptxas-options=-v ../file_t/readatom.o -lcublas -lm -lpthread -arch=sm_75 -lcurand -Xptxas -dlcm=ca $(file);)
+cutcp_lbm_mix: $(wildcard cutcp_lbm_*.cu)
+	$(foreach file,$^,nvcc -o $(patsubst %.cu,%_mix,$(file)) -I../ --ptxas-options=-v ../file_t/readatom.o -lcublas -lm -arch=sm_75 -lcurand -Xptxas -dlcm=ca $(file);)
+cutcp_mrif_mix: $(wildcard cutcp_mrif_*.cu)
+	$(foreach file,$^,nvcc -o $(patsubst %.cu,%_mix,$(file)) -I../ --ptxas-options=-v ../file_t/readatom.o -lcublas -lm -lpthread -arch=sm_75 -lcurand -Xptxas -dlcm=ca $(file);)
+cutcp_mriq_mix: $(wildcard cutcp_mriq_*.cu)
+	$(foreach file,$^,nvcc -o $(patsubst %.cu,%_mix,$(file)) -I../ --ptxas-options=-v ../file_t/readatom.o -lcublas -lm -arch=sm_75 -lcurand -Xptxas -dlcm=ca $(file);)
+cutcp_sgemm_mix: $(wildcard cutcp_sgemm_*.cu)
+	$(foreach file,$^,nvcc -o $(patsubst %.cu,%_mix,$(file)) -I../ --ptxas-options=-v ../file_t/readatom.o -lcublas -lm -arch=sm_75 -lcurand -Xptxas -dlcm=ca $(file);)
+cutcp_stencil_mix: $(wildcard cutcp_stencil_*.cu)
+	$(foreach file,$^,nvcc -o $(patsubst %.cu,%_mix,$(file)) -I../ --ptxas-options=-v -lcurand ../file_t/readatom.o -lm -lcublas -arch=sm_75 -Xptxas -dlcm=ca $(file);)
+
+fft_lbm_mix: $(wildcard fft_lbm_*.cu)
+	$(foreach file,$^,nvcc -o $(patsubst %.cu,%_mix,$(file)) -I../ --ptxas-options=-v -lcublas -lcurand -lm -arch=sm_75 -lpthread -Xptxas -dlcm=ca $(file);)
+fft_mrif_mix: $(wildcard fft_mrif_*.cu)
+	$(foreach file,$^,nvcc -o $(patsubst %.cu,%_mix,$(file)) -I../ --ptxas-options=-v -lcublas -lcurand -lm -arch=sm_75 -lpthread $(file);)
+fft_mriq_mix: $(wildcard fft_mriq_*.cu)
+	$(foreach file,$^,nvcc -o $(patsubst %.cu,%_mix,$(file)) -I../ --ptxas-options=-v -lcublas -lcurand -lm -arch=sm_75 -lpthread -Xptxas -dlcm=ca $(file);)
+fft_sgemm_mix: $(wildcard fft_sgemm_*.cu)
+	$(foreach file,$^,nvcc -o $(patsubst %.cu,%_mix,$(file)) -I../ --ptxas-options=-v -lcublas -lcurand -lm -arch=sm_75 -lpthread -Xptxas -dlcm=ca $(file);)
+fft_stencil_mix: $(wildcard fft_stencil_*.cu)
+	$(foreach file,$^,nvcc -o $(patsubst %.cu,%_mix,$(file)) -I../ --ptxas-options=-v -lcurand -lpthread -lm -lcublas -arch=sm_75 -Xptxas -dlcm=ca $(file);)
+
+lbm_mrif_mix: $(wildcard lbm_mrif_*.cu)
+	$(foreach file,$^,nvcc -o $(patsubst %.cu,%_mix,$(file)) -I../ --ptxas-options=-v -lcublas -lm -lpthread -arch=sm_75 -lcurand -Xptxas -dlcm=ca $(file);)
+lbm_mriq_mix: $(wildcard lbm_mriq_*.cu)
+	$(foreach file,$^,nvcc -o $(patsubst %.cu,%_mix,$(file)) -I../ --ptxas-options=-v -lcublas -arch=sm_75 -lcurand -Xptxas -dlcm=ca $(file);)
+lbm_sgemm_mix: $(wildcard lbm_sgemm_*.cu)
+	$(foreach file,$^,nvcc -o $(patsubst %.cu,%_mix,$(file)) -I../ --ptxas-options=-v -lcublas -arch=sm_75 -lcurand -Xptxas -dlcm=ca $(file);)
+lbm_stencil_mix: $(wildcard lbm_stencil_*.cu)
+	$(foreach file,$^,nvcc -o $(patsubst %.cu,%_mix,$(file)) -I../ --ptxas-options=-v -lcurand -lcublas -arch=sm_75 -Xptxas -dlcm=ca $(file);)
+
+mrif_mriq_mix: $(wildcard mrif_mriq_*.cu)
+	$(foreach file,$^,nvcc -o $(patsubst %.cu,%_mix,$(file)) -I../ --ptxas-options=-v -lcublas -lcurand -lm -arch=sm_75 -lpthread -Xptxas -dlcm=ca $(file);)
+mrif_sgemm_mix: $(wildcard mrif_sgemm_*.cu)
+	$(foreach file,$^,nvcc -o $(patsubst %.cu,%_mix,$(file)) -I../ --ptxas-options=-v -lcublas -lcurand -lm -arch=sm_75 -lpthread -Xptxas -dlcm=ca $(file);)
+mrif_stencil_mix: $(wildcard mrif_stencil_*.cu)
+	$(foreach file,$^,nvcc -o $(patsubst %.cu,%_mix,$(file)) -I../ --ptxas-options=-v -lcurand -lpthread -lm -lcublas -arch=sm_75 -Xptxas -dlcm=ca $(file);)
+
+mriq_sgemm_mix: $(wildcard mriq_sgemm_*.cu)
+	$(foreach file,$^,nvcc -o $(patsubst %.cu,%_mix,$(file)) -I../ --ptxas-options=-v -lcublas -arch=sm_75 -lcurand -Xptxas -dlcm=ca $(file);)
+mriq_stencil_mix: $(wildcard mriq_stencil_*.cu)
+	$(foreach file,$^,nvcc -o $(patsubst %.cu,%_mix,$(file)) -I../ --ptxas-options=-v -lcurand -lcublas -arch=sm_75 -Xptxas -dlcm=ca $(file);)
+
+sgemm_stencil_mix: $(wildcard sgemm_stencil_*.cu)
+	$(foreach file,$^,nvcc -o $(patsubst %.cu,%_mix,$(file)) -I../ --ptxas-options=-v -lcurand -lcublas -arch=sm_75 -Xptxas -dlcm=ca $(file);)
+
+clean:
+	rm -f *_mix
+
+all: cp_cutcp_mix cp_fft_mix cp_lbm_mix cp_mrif_mix cp_mriq_mix cp_sgemm_mix cp_stencil_mix cutcp_fft_mix cutcp_lbm_mix cutcp_mrif_mix cutcp_mriq_mix cutcp_sgemm_mix cutcp_stencil_mix fft_lbm_mix fft_mrif_mix fft_mriq_mix fft_sgemm_mix fft_stencil_mix lbm_mrif_mix lbm_mriq_mix lbm_sgemm_mix lbm_stencil_mix mrif_mriq_mix mrif_sgemm_mix mrif_stencil_mix mriq_sgemm_mix mriq_stencil_mix sgemm_stencil_mix
+	@echo "All finished"

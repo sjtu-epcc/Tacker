@@ -1,0 +1,96 @@
+candidates for cp_cutcp:
+kernel1_num:  6 kernel2_num:  1 blks_per_sm:  1 reg used:  35328 sm used:  4096 thread used:  896
+kernel1_num:  6 kernel2_num:  2 blks_per_sm:  1 reg used:  40704 sm used:  8192 thread used:  1024
+kernel1_num:  3 kernel2_num:  1 blks_per_sm:  2 reg used:  40704 sm used:  8192 thread used:  1024
+candidates for cp_fft:
+kernel1_num:  6 kernel2_num:  1 blks_per_sm:  1 reg used:  34176 sm used:  2048 thread used:  896
+kernel1_num:  6 kernel2_num:  2 blks_per_sm:  1 reg used:  38400 sm used:  4096 thread used:  1024
+kernel1_num:  3 kernel2_num:  1 blks_per_sm:  2 reg used:  38400 sm used:  4096 thread used:  1024
+candidates for cp_lbm:
+kernel1_num:  6 kernel2_num:  1 blks_per_sm:  1 reg used:  37760 sm used:  0 thread used:  896
+kernel1_num:  6 kernel2_num:  2 blks_per_sm:  1 reg used:  45568 sm used:  0 thread used:  1024
+kernel1_num:  3 kernel2_num:  1 blks_per_sm:  2 reg used:  45568 sm used:  0 thread used:  1024
+candidates for cp_mrif:
+kernel1_num:  6 kernel2_num:  1 blks_per_sm:  1 reg used:  38144 sm used:  0 thread used:  1024
+candidates for cp_mriq:
+kernel1_num:  6 kernel2_num:  1 blks_per_sm:  1 reg used:  37888 sm used:  0 thread used:  1024
+candidates for cp_sgemm:
+kernel1_num:  6 kernel2_num:  1 blks_per_sm:  1 reg used:  38144 sm used:  512 thread used:  896
+kernel1_num:  6 kernel2_num:  2 blks_per_sm:  1 reg used:  46336 sm used:  1024 thread used:  1024
+kernel1_num:  3 kernel2_num:  1 blks_per_sm:  2 reg used:  46336 sm used:  1024 thread used:  1024
+candidates for cp_tpacf:
+kernel1_num:  6 kernel2_num:  1 blks_per_sm:  1 reg used:  40448 sm used:  13312 thread used:  1024
+candidates for cutcp_fft:
+kernel1_num:  6 kernel2_num:  1 blks_per_sm:  1 reg used:  36480 sm used:  26624 thread used:  896
+kernel1_num:  6 kernel2_num:  2 blks_per_sm:  1 reg used:  40704 sm used:  28672 thread used:  1024
+kernel1_num:  3 kernel2_num:  1 blks_per_sm:  2 reg used:  40704 sm used:  28672 thread used:  1024
+candidates for cutcp_lbm:
+kernel1_num:  6 kernel2_num:  1 blks_per_sm:  1 reg used:  40064 sm used:  24576 thread used:  896
+kernel1_num:  6 kernel2_num:  2 blks_per_sm:  1 reg used:  47872 sm used:  24576 thread used:  1024
+kernel1_num:  3 kernel2_num:  1 blks_per_sm:  2 reg used:  47872 sm used:  24576 thread used:  1024
+candidates for cutcp_mrif:
+kernel1_num:  6 kernel2_num:  1 blks_per_sm:  1 reg used:  40448 sm used:  24576 thread used:  1024
+candidates for cutcp_mriq:
+kernel1_num:  6 kernel2_num:  1 blks_per_sm:  1 reg used:  40192 sm used:  24576 thread used:  1024
+candidates for cutcp_sgemm:
+kernel1_num:  6 kernel2_num:  1 blks_per_sm:  1 reg used:  40448 sm used:  25088 thread used:  896
+kernel1_num:  6 kernel2_num:  2 blks_per_sm:  1 reg used:  48640 sm used:  25600 thread used:  1024
+kernel1_num:  3 kernel2_num:  1 blks_per_sm:  2 reg used:  48640 sm used:  25600 thread used:  1024
+candidates for cutcp_tpacf:
+kernel1_num:  6 kernel2_num:  1 blks_per_sm:  1 reg used:  42752 sm used:  37888 thread used:  1024
+candidates for fft_lbm:
+kernel1_num:  3 kernel2_num:  1 blks_per_sm:  1 reg used:  20480 sm used:  6144 thread used:  512
+kernel1_num:  3 kernel2_num:  2 blks_per_sm:  1 reg used:  28288 sm used:  6144 thread used:  640
+kernel1_num:  3 kernel2_num:  3 blks_per_sm:  1 reg used:  36096 sm used:  6144 thread used:  768
+kernel1_num:  3 kernel2_num:  4 blks_per_sm:  1 reg used:  43904 sm used:  6144 thread used:  896
+kernel1_num:  3 kernel2_num:  5 blks_per_sm:  1 reg used:  51712 sm used:  6144 thread used:  1024
+kernel1_num:  1 kernel2_num:  1 blks_per_sm:  3 reg used:  36096 sm used:  6144 thread used:  768
+candidates for fft_mrif:
+kernel1_num:  3 kernel2_num:  1 blks_per_sm:  1 reg used:  20864 sm used:  6144 thread used:  640
+kernel1_num:  3 kernel2_num:  2 blks_per_sm:  1 reg used:  29056 sm used:  6144 thread used:  896
+candidates for fft_mriq:
+kernel1_num:  3 kernel2_num:  1 blks_per_sm:  1 reg used:  20608 sm used:  6144 thread used:  640
+kernel1_num:  3 kernel2_num:  2 blks_per_sm:  1 reg used:  28544 sm used:  6144 thread used:  896
+candidates for fft_sgemm:
+kernel1_num:  3 kernel2_num:  1 blks_per_sm:  1 reg used:  20864 sm used:  6656 thread used:  512
+kernel1_num:  3 kernel2_num:  2 blks_per_sm:  1 reg used:  29056 sm used:  7168 thread used:  640
+kernel1_num:  3 kernel2_num:  3 blks_per_sm:  1 reg used:  37248 sm used:  7680 thread used:  768
+kernel1_num:  3 kernel2_num:  4 blks_per_sm:  1 reg used:  45440 sm used:  8192 thread used:  896
+kernel1_num:  3 kernel2_num:  5 blks_per_sm:  1 reg used:  53632 sm used:  8704 thread used:  1024
+kernel1_num:  1 kernel2_num:  1 blks_per_sm:  3 reg used:  37248 sm used:  7680 thread used:  768
+candidates for fft_tpacf:
+kernel1_num:  3 kernel2_num:  1 blks_per_sm:  1 reg used:  23168 sm used:  19456 thread used:  640
+kernel1_num:  3 kernel2_num:  2 blks_per_sm:  1 reg used:  33664 sm used:  32768 thread used:  896
+candidates for lbm_mrif:
+kernel1_num:  1 kernel2_num:  1 blks_per_sm:  1 reg used:  16000 sm used:  0 thread used:  384
+kernel1_num:  1 kernel2_num:  2 blks_per_sm:  1 reg used:  24192 sm used:  0 thread used:  640
+kernel1_num:  1 kernel2_num:  3 blks_per_sm:  1 reg used:  32384 sm used:  0 thread used:  896
+candidates for lbm_mriq:
+kernel1_num:  1 kernel2_num:  1 blks_per_sm:  1 reg used:  15744 sm used:  0 thread used:  384
+kernel1_num:  1 kernel2_num:  2 blks_per_sm:  1 reg used:  23680 sm used:  0 thread used:  640
+kernel1_num:  1 kernel2_num:  3 blks_per_sm:  1 reg used:  31616 sm used:  0 thread used:  896
+candidates for lbm_sgemm:
+kernel1_num:  1 kernel2_num:  1 blks_per_sm:  1 reg used:  16000 sm used:  512 thread used:  256
+kernel1_num:  1 kernel2_num:  2 blks_per_sm:  1 reg used:  24192 sm used:  1024 thread used:  384
+kernel1_num:  1 kernel2_num:  3 blks_per_sm:  1 reg used:  32384 sm used:  1536 thread used:  512
+kernel1_num:  1 kernel2_num:  4 blks_per_sm:  1 reg used:  40576 sm used:  2048 thread used:  640
+kernel1_num:  1 kernel2_num:  5 blks_per_sm:  1 reg used:  48768 sm used:  2560 thread used:  768
+kernel1_num:  1 kernel2_num:  6 blks_per_sm:  1 reg used:  56960 sm used:  3072 thread used:  896
+kernel1_num:  1 kernel2_num:  7 blks_per_sm:  1 reg used:  65152 sm used:  3584 thread used:  1024
+candidates for lbm_tpacf:
+kernel1_num:  1 kernel2_num:  1 blks_per_sm:  1 reg used:  18304 sm used:  13312 thread used:  384
+kernel1_num:  1 kernel2_num:  2 blks_per_sm:  1 reg used:  28800 sm used:  26624 thread used:  640
+kernel1_num:  1 kernel2_num:  3 blks_per_sm:  1 reg used:  39296 sm used:  39936 thread used:  896
+candidates for mrif_mriq:
+kernel1_num:  3 kernel2_num:  1 blks_per_sm:  1 reg used:  32512 sm used:  0 thread used:  1024
+candidates for mrif_sgemm:
+kernel1_num:  3 kernel2_num:  1 blks_per_sm:  1 reg used:  32768 sm used:  512 thread used:  896
+kernel1_num:  3 kernel2_num:  2 blks_per_sm:  1 reg used:  40960 sm used:  1024 thread used:  1024
+candidates for mrif_tpacf:
+kernel1_num:  3 kernel2_num:  1 blks_per_sm:  1 reg used:  35072 sm used:  13312 thread used:  1024
+candidates for mriq_sgemm:
+candidates for mriq_tpacf:
+candidates for sgemm_tpacf:
+kernel1_num:  4 kernel2_num:  1 blks_per_sm:  1 reg used:  43264 sm used:  15360 thread used:  768
+kernel1_num:  4 kernel2_num:  2 blks_per_sm:  1 reg used:  53760 sm used:  28672 thread used:  1024
+kernel1_num:  2 kernel2_num:  1 blks_per_sm:  2 reg used:  53760 sm used:  28672 thread used:  1024

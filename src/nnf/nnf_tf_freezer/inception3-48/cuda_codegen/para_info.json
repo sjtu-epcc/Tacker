@@ -1,0 +1,24 @@
+{
+    "input": {
+        "Placeholder": {
+            "id": "((float*)(inputs[0]))",
+            "name": "Parameter_0_0",
+            "shape": [
+                48,
+                299,
+                299,
+                3
+            ]
+        }
+    },
+    "output": {
+        "Add_891_0": {
+            "id": "((float*)(outputs[0]))",
+            "name": "Result_892_0",
+            "shape": [
+                48,
+                1001
+            ]
+        }
+    }
+}

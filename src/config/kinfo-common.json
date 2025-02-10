@@ -1,0 +1,60 @@
+{
+    "resnet50": {
+        "MAX_ORI_WMMA_A": 822083584,
+        "MAX_ORI_WMMA_B": 6422528,
+        "MAX_ORI_WMMA_C": 822083584,
+        "MAX_COL_BUFFER": 102760448,
+        "MAX_BOTTOM": 102760448,
+        "MY_IM2COL_BLK_PER_SM": 2,
+        "MY_WMMA_BLK_PER_SM": 2
+    },
+    "inception3": {
+        "MAX_ORI_WMMA_A": 822083584,
+        "MAX_ORI_WMMA_B": 6422528,
+        "MAX_ORI_WMMA_C": 822083584,
+        "MAX_COL_BUFFER": 102760448,
+        "MAX_BOTTOM": 102760448,
+        "MY_IM2COL_BLK_PER_SM": 2,
+        "MY_WMMA_BLK_PER_SM": 2
+    },
+    "vgg16": {
+        "MAX_ORI_WMMA_A": 3288334336,
+        "MAX_ORI_WMMA_B": 6422528,
+        "MAX_ORI_WMMA_C": 1644167168,
+        "MAX_COL_BUFFER": 205520896,
+        "MAX_BOTTOM": 205520896,
+        "MY_IM2COL_BLK_PER_SM": 2,
+        "MY_WMMA_BLK_PER_SM": 2
+    },
+    "vgg11": {
+        "MAX_ORI_WMMA_A": 3288334336,
+        "MAX_ORI_WMMA_B": 6422528,
+        "MAX_ORI_WMMA_C": 1644167168,
+        "MAX_COL_BUFFER": 205520896,
+        "MAX_BOTTOM": 205520896,
+        "MY_IM2COL_BLK_PER_SM": 2,
+        "MY_WMMA_BLK_PER_SM": 2
+    },
+    "bert": {
+        "MAX_ORI_WMMA_A": 822083584,
+        "MAX_ORI_WMMA_B": 33554432,
+        "MAX_ORI_WMMA_C": 822083584,
+        "MAX_COL_BUFFER": 102760448,
+        "MAX_BOTTOM": 102760448,
+        "MY_IM2COL_BLK_PER_SM": 2,
+        "MY_WMMA_BLK_PER_SM": 2
+    },
+    "vit": {
+        "MAX_ORI_WMMA_A": 822083584,
+        "MAX_ORI_WMMA_B": 33554432,
+        "MAX_ORI_WMMA_C": 822083584,
+        "MAX_COL_BUFFER": 102760448,
+        "MAX_BOTTOM": 102760448,
+        "MY_IM2COL_BLK_PER_SM": 2,
+        "MY_WMMA_BLK_PER_SM": 2
+    },
+    "ratio_test": {
+        "mix_fft_blk_num": 360396,
+        "mix_tzgemm_blk_num": 127800
+    }
+}

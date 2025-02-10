@@ -1,0 +1,50 @@
+{
+    "cp" : {
+        "register": 39, 
+        "shared_memory": 0, 
+        "blocksize": 128, 
+        "ori_blks": 16384
+    },
+    "cutcp": {
+        "register": 42, 
+        "shared_memory": 4096, 
+        "blocksize": 128, 
+        "ori_blks": 1352
+    },
+    "fft": {
+        "register": 33, 
+        "shared_memory": 2048, 
+        "blocksize": 128, 
+        "ori_blks": 10240
+    },
+    "lbm": {
+        "register": 61,
+         "shared_memory": 0, 
+         "blocksize": 128, 
+         "ori_blks": 16384
+        },
+    "mrif": {
+        "register": 32, 
+        "shared_memory": 0, 
+        "blocksize": 256, 
+        "ori_blks": 1024
+    },
+    "mriq": {
+        "register": 31, 
+        "shared_memory": 0,
+        "blocksize": 256, 
+        "ori_blks": 819
+    },
+    "sgemm": {
+        "register": 64, 
+        "shared_memory": 512, 
+        "blocksize": 128, 
+        "ori_blks": 774
+    },
+    "stencil": {
+        "register": 38, 
+        "shared_memory": 1024, 
+        "blocksize": 128, 
+        "ori_blks": 1024
+    }
+}
